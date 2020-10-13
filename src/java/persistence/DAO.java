@@ -32,6 +32,10 @@ public class DAO {
         catch(Exception  e) {
             System.out.println(e.getMessage());
         }
+        finally{
+           session.close();
+ 
+        }
     }
     
     public void delete(Person person){
@@ -45,6 +49,10 @@ public class DAO {
         catch(Exception  e) {
             System.out.println(e.getMessage());
         }
+        finally{
+           session.close();
+ 
+        }
     }
     
     public void update(Person person){
@@ -57,6 +65,10 @@ public class DAO {
         }
         catch(Exception  e) {
             System.out.println(e.getMessage());
+        }
+        finally{
+           session.close();
+ 
         }
     }
     
@@ -73,6 +85,10 @@ public class DAO {
         catch(Exception e) {
             System.out.println(e.getMessage());
         }
+        finally{
+           session.close();
+ 
+        }
         return person;
     }
     
@@ -87,6 +103,10 @@ public class DAO {
         }
         catch(Exception e) {
              System.out.println(e.getMessage());
+        }
+        finally{
+           session.close();
+ 
         }
         return persons;    
     }

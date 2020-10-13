@@ -9,24 +9,36 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import javax.faces.event.ActionEvent;
 import model.FacesUtil;
 import model.Person;
+import model.SessionUtils;
+import model.User;
 import persistence.DAO;
+import persistence.UserDAO;
 
 /**
  *
  * @author wenkary
  */
 @ManagedBean
-@RequestScoped
+@SessionScoped
 public class PersonBean {
     
     @ManagedProperty(value = "#{dao}")
     private DAO dao;
     @ManagedProperty(value = "#{person}")
     private Person person;
-
+    private User user;
+    
+    public PersonBean() {
+        String username = SessionUtils.getUsername();
+        String userId = SessionUtils.getUserId();
+        this.user = new User();
+        this.user.setUsername(username);
+        this.user.setId(Long.parseLong(userId));
+    }
     // setters and getters
     
     public DAO getDao() {

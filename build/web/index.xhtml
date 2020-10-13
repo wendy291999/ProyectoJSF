@@ -15,15 +15,15 @@
     <h:body>
         Crud Personas JSF
         <h:form>
-            <h:panelGrid columns="2">
-                Id: <h:inputText value="#{personBean.person.id}"/>
-                Nombre: <h:inputText value="#{personBean.person.name}"/>
-                Telefono: <h:inputText value="#{personBean.person.telephone}"/>
-                Direccion: <h:inputText value="#{personBean.person.address}"/>
-                <h:panelGrid columns="3">
-                    <h:commandButton value="Guardar" action="#{personBean.create()}"/>
-                    <h:commandButton value="Actualizar" action="#{personBean.update()}"/>
-                    <h:commandButton value="Limpiar" action="#{personBean.resetForm()}"/>  
+                <h:panelGrid columns="2">
+                    Id: <h:inputText value="#{personBean.person.id}"/>
+                    Nombre: <h:inputText value="#{personBean.person.name}"/>
+                    Telefono: <h:inputText value="#{personBean.person.telephone}"/>
+                    Direccion: <h:inputText value="#{personBean.person.address}"/>
+                    <h:panelGrid columns="3">
+                        <h:commandButton value="Guardar" action="#{personBean.create()}"/>
+                        <h:commandButton value="Actualizar" action="#{personBean.update()}"/>
+                        <h:commandButton value="Limpiar" action="#{personBean.resetForm()}"/>  
                 </h:panelGrid>
 
             </h:panelGrid>

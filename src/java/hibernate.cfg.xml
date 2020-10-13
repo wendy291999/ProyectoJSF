@@ -49,5 +49,8 @@ Contributor(s):
     <property name="hibernate.current_session_context_class">thread</property>
     <property name="hibernate.connection.password">wendys123</property>
     <mapping resource="model/Person.hbm.xml"/>
+    <!--<mapping resource="hibernate.hbm.xml"/>-->
+<!--    <mapping resource="model/hibernate.hbm.xml"/>-->
+    <mapping resource="model/User.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
